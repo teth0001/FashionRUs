@@ -1,0 +1,307 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #fef5eb;
+}
+
+main {
+  max-width: 1200px;
+  margin: auto;
+}
+
+ul {
+  display: flex;
+  justify-content: center;
+  margin-top: 0.5em;
+}
+
+ul li {
+  display: inline;
+  margin: 1rem;
+}
+
+ul a {
+  color: #0a070e;
+  text-decoration: none;
+  font-size: 1.5em;
+}
+
+ul a:hover {
+  color: #00257a;
+  text-decoration: underline;
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: 1fr;
+  margin: 2em 0;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  margin: 1rem 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h6,
+select,
+dt {
+  font-family: "Inter", serif;
+  text-align: center;
+}
+
+p,
+a,
+h5,
+dd {
+  font-family: "IBM Plex Serif", serif;
+  font-size: 1.3rem;
+}
+
+.tilbud {
+  color: red;
+}
+
+.stregpris {
+  text-decoration: line-through;
+}
+
+/* forside */
+
+h2 {
+  margin-top: 4em;
+}
+
+.categories {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.categories a {
+  font-family: "Inter", serif;
+  width: 300px;
+  height: 75px;
+  border-radius: 20px;
+  background: #00257a;
+  margin: 1rem auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: #fef5eb;
+  font-size: 2rem;
+}
+
+.udsolgt {
+  opacity: 50%;
+}
+
+.udsolgtp {
+  position: absolute;
+  top: 50;
+  background: #f9b3b8;
+  padding: 0.5em;
+  border-radius: 5px 0 0 0;
+}
+
+/* PRODUKTLIST */
+
+.category {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin: 1rem;
+}
+
+img {
+  width: 200px;
+  border-radius: 5px 5px 0 0;
+  box-shadow: grey 1px 1px 5px;
+  margin-bottom: 0;
+}
+
+.item {
+  width: 200px;
+  height: 400px;
+  display: grid;
+  grid-template-rows: subgrid;
+  grid-row: span 6;
+}
+
+h3 {
+  background: #00257a;
+  color: #fef5eb;
+  padding: 0.4em;
+  border-radius: 0 0 20px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: -1em;
+  box-shadow: grey 1px 1px 5px;
+  width: 200px;
+}
+
+h4 {
+  color: #f9b3b8;
+}
+
+.pris {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+}
+
+.mere {
+  text-decoration: underline;
+  color: #0a070e;
+  margin: auto;
+}
+
+.mere:hover {
+  color: #00257a;
+}
+
+/* PRODUKT */
+
+.produkt {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.produktinfo {
+  width: 350px;
+  height: 450px;
+  padding: 1rem;
+  margin: 0.5em auto;
+  background: #00257a;
+  color: #ecfafe;
+  border-radius: 20px;
+}
+
+.produktinfo h2 {
+  margin-bottom: 2em;
+  margin-top: 1em;
+}
+
+dt {
+  text-align: left;
+  text-decoration: underline;
+  font-size: 1.2em;
+  margin: 1em 0;
+}
+
+dd {
+  text-align: center;
+  margin: 0.5em 0;
+}
+
+.produktimg {
+  width: 300px;
+  margin: 2em auto;
+}
+
+.kurv {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 1rem auto;
+  width: 350px;
+  height: 170px;
+  background: #00257a;
+  color: #fef5eb;
+  padding: 0.7em;
+  border-radius: 20px;
+}
+
+h5 {
+  grid-column: span 2;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+h6 {
+  font-size: 1rem;
+  text-align: right;
+  padding-right: 0.5em;
+}
+
+.tilkurv {
+  width: 140px;
+  height: 40px;
+  background: #ecfafe;
+  color: #0a070e;
+  padding: 5px 10px;
+  text-align: center;
+  border-radius: 20px;
+  grid-column: span 2;
+  margin: auto;
+}
+
+.tilkurv:hover {
+  background: #f9b3b8;
+  transform: scale(1.05);
+}
+
+select {
+  margin-left: 2em;
+}
+
+/* MEDIA */
+
+@media (width > 700px) {
+  .categories {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+
+  .produkt {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .kurv {
+    grid-column: span 2;
+  }
+}
+
+@media (width > 1000px) {
+  .categories {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1rem;
+  }
+
+  .produkt {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+  }
+
+  .produktinfo {
+    grid-row: span 4;
+  }
+
+  .produktimg {
+    grid-row: span 4;
+  }
+
+  .kurv {
+    grid-column: 3;
+    grid-row: 2;
+  }
+}
